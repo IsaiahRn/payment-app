@@ -1,0 +1,38 @@
+{
+  "name": "payment-acceptance-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel server -d dist --source-maps",
+    "serve": "npm run build && node dist/index.js",
+    "dev": "babel-watch src/index.js",
+    "start": "nodemon src/index.js --exec babel-node",
+    "test": "npm run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.0",
+    "@hapi/joi": "^17.1.1",
+    "babel-eslint": "^10.1.0",
+    "babel-watch": "^7.7.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.10.0",
+    "express": "^4.17.3",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.4",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2",
+    "uuidv4": "^6.2.12"
+  }
+}
