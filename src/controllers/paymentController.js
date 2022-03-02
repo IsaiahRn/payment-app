@@ -16,10 +16,12 @@ class PaymentController {
         Amount
       };
 
-      await payments.create(createPayment);
+      const payment = await payments.create(createPayment);
 
       return res.status(200).json({
-        message: "Paid successfully"
+        message: "Paid successfully",
+        RequestId: payment._id,
+        Amount: payment.Amount
       });
     } catch (err) {
       return res.status(500).json({
