@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel server -d dist --source-maps",
+    "build": "babel src -d dist --source-maps",
     "serve": "npm run build && node dist/index.js",
     "dev": "babel-watch src/index.js",
     "start": "nodemon src/index.js --exec babel-node",
