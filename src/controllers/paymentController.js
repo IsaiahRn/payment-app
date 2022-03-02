@@ -30,6 +30,27 @@ class PaymentController {
       });
     }
   }
+
+  static async fetchOnePayment(req, res) {
+    const { id } = req.params;
+
+    try {
+      const foundPayment =  await payments.findOne({ _id: id }).exec();
+      if (!foundPayment) {
+        return res.status(404).json({
+          status: 404,
+          Error: 'Payment not found',
+        });
+      }
+      return res.status(200).json({
+        Payment: foundPayment,
+      });
+    } catch (err) {
+      return res.status(500).json({
+        error: 'An error has occured, please contact our custumer support',
+      });
+    }
+  }
 }
 
 export default PaymentController;
