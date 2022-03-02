@@ -19,9 +19,7 @@ class PaymentController {
       await payments.create(createPayment);
 
       return res.status(200).json({
-        message: "Paid successfully",
-        RequestId: '',
-        Amount
+        message: "Paid successfully"
       });
     } catch (err) {
       return res.status(500).json({
